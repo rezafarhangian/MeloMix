@@ -5,7 +5,7 @@
  */
 
 const app = require('../app');
-const debug = require('debug')('final-project-maktab88:server');
+const debug = require('debug')('MeloMix');
 const http = require('http');
 
 /**

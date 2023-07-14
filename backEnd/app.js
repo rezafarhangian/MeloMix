@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 mongoose
-	.connect('mongodb://127.0.0.1:27017/corporate')
+	.connect('mongodb://127.0.0.1:27017/MeloMix')
 	.then(() => {
 		console.log('[+] database connected');
 	})
