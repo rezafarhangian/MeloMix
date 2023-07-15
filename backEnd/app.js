@@ -4,6 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const { connectToDatabase } = require('./database/database-connection');
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
@@ -22,14 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-mongoose
-	.connect('mongodb://127.0.0.1:27017/MeloMix')
-	.then(() => {
-		console.log('[+] database connected');
-	})
-	.catch(err => {
-		console.error('[-] database connection > ', err);
-	});
+// database connection
+connectToDatabase();
 
 
 app.use('/', indexRouter);
