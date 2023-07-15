@@ -1,4 +1,5 @@
 const { connect, connection } = require('mongoose');
+require('dotenv').config()
 
 const connectToDatabase = async () => {
 	try {
@@ -12,7 +13,7 @@ const connectToDatabase = async () => {
 };
 
 connection.once('connected', () => {
-	console.log('[+] database connected');
+	console.log('[+] database connected')
 });
 
 connection.on('error', error => {
