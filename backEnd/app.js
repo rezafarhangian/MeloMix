@@ -9,6 +9,11 @@ const { connectToDatabase } = require('./database/database-connection');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
+
+//error handler 
+const notFoundError = require("./middlewares/notFoundError");
+const globalError = require("./middlewares/globalErrorHandler");
+
 const app = express();
 
 // view engine setup
