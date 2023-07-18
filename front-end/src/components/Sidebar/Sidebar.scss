@@ -1,0 +1,29 @@
+
+.sidebar{
+    background-color: #fff;
+    border-left: 1px solid #dadada;
+    transition: all 300ms ;
+  }
+  
+  .opensidebar{
+   width: 300px;
+  }
+  
+  .closesidebar{
+    width: 75px;
+  }
+  
+
+  
+  .color-link{
+    color: #535353;
+  }
+  
+  .bg-submenu{
+    
+    background-color: #f2f2f2;
+  }
+  
+  .active{
+    width: 200px;
+  }

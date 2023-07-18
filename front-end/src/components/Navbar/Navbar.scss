@@ -1,0 +1,49 @@
+@import "../../../scss/variables.scss";
+
+.navbar {
+  background-color: #fff;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.btn-Hamburger {
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+
+.icon-hamburger {
+  color: $main-color;
+  font-size: 30px;
+}
+
+.logo {
+  color: $main-color;
+}
+
+.login-btn {
+  outline: none;
+  border: 0;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 11.5px;
+  font-weight: bold;
+  background-color:  $main-color;
+  border-radius: 30px;
+}
+
+.search {
+   background-color: #f1f1f1;
+   padding: 4px;
+   border-radius: 4px;
+  input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #838181;
+  }
+
+  svg{
+    font-size: 20px;
+    color: #838181;
+  }
+}
