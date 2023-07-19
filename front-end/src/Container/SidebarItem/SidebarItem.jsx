@@ -14,7 +14,7 @@ export default function SidebarItem({ item, openSidebar, setOpenSidebar }) {
 
   if (item.childrens) {
     return (
-      <div className={`${open ? "sidebar-item open" : "sidebar-item"}   p-0`}>
+      <div className={`${open ? "sidebar-item open" : "sidebar-item"}   p-0`}> 
         <div
           onClick={() => {
             setOpen(!open)
@@ -30,7 +30,7 @@ export default function SidebarItem({ item, openSidebar, setOpenSidebar }) {
           </div>
 
           {open ? (
-            <i class={`bi bi-chevron-up toggle-btn ${openSidebar ? "d-block" : "d-none"}`}></i>
+            <i className={`bi bi-chevron-up toggle-btn ${openSidebar ? "d-block" : "d-none"}`}></i>
           ) : (
             <i className={`bi-chevron-down toggle-btn ${openSidebar ? "d-block" : "d-none"}`}></i>
           )}
@@ -38,7 +38,7 @@ export default function SidebarItem({ item, openSidebar, setOpenSidebar }) {
 
         <div className="sidebar-content ">
           {item.childrens.map((child, index) => (
-            <Link key={index} to="/" className="submenu d-block">
+            <Link key={index} to={child.path} className="submenu d-block">
               {child.title}
             </Link>
           ))}

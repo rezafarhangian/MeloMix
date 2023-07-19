@@ -15,7 +15,7 @@ export default function App() {
       <Sidebar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
 
       <div className="w-100  ">
-        <Navbar/>
+        <Navbar openSidebar={openSidebar} />
         <div className=" p-3  h-100 overflow-y-auto ">
           <div className="">{router}</div>
         </div>

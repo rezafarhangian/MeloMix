@@ -4,17 +4,17 @@ import Col from "react-bootstrap/Col";
 import "./Navbar.scss";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { LiaSearchSolid } from "react-icons/lia";
-import NavbarMobile from "../SidebarMobile/SidebarMobile";
+import SidebarMobile from "../SidebarMobile/SidebarMobile";
+import {BsMusicNote} from "react-icons/bs"
 
 
+export default function Navbar({openSidebar}) {
 
-export default function Navbar() {
-
-  const [openSidebar, setOpenSidebar] = useState(false);
 
 
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
+
 
   return (
     <>
@@ -22,15 +22,16 @@ export default function Navbar() {
         <Row className="d-flex justify-content-between align-items-center  w-100 m-auto ">
           <Col className="d-flex  align-items-center ">
             <button onClick={handleShow} className="btn-Hamburger p-0 d-lg-none">
-              <RxHamburgerMenu className="icon-hamburger " />
+              <RxHamburgerMenu className="icon-hamburger  " />
             </button>
-            <h6
+            <div
               className={`${
-                openSidebar ? "d-none" : "d-block"
-              } mt-2 me-3 fw-bold logo`}
-            >
-              ملومیکس
-            </h6>
+                openSidebar ? "d-none" : "d-lg-flex"
+              } mt-2 me-3 fw-bold logo  align-items-center d-none`}
+            >  
+                  <BsMusicNote/>
+              <h1>ملومیکس</h1>
+            </div>
             <div className="search d-flex align-items-center d-none d-lg-block me-5">
               <LiaSearchSolid />
               <input type="text" placeholder="جستجو ..." className="me-1" />
@@ -52,7 +53,7 @@ export default function Navbar() {
           </Col>
         </Row>
       </div>
-            <NavbarMobile show={show} setShow={setShow}/>
+            <SidebarMobile show={show} setShow={setShow}/>
       </>
   );
 }
