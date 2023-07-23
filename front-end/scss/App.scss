@@ -1,12 +1,52 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
+@import "./variables.scss";
 
 
 @font-face {
     font-family: "Vazir";
     src: url("../public/fonts/Vazirmatn-Light.ttf");
 }
+@font-face {
+    font-family: "Domrol";
+    src: url("../public/fonts/Far_Domrol.ttf");
+}
+
+
+
 
 body{
     font-family: "Vazir";
+    background-color: $body-color;
 }
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+//  ==================== Style to scrollbar  ======================
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+          

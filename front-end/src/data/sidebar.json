@@ -1,0 +1,83 @@
+[
+    {
+        "title": "صفحه اصلی",
+        "icon": "bi bi-house"
+        
+    },
+    {
+        "title": "پادکست",
+        "icon": "bi bi-mic",
+        "childrens": [
+            {
+                "title": "همه دسته بندی",
+                "path": "/login"
+            },
+            {
+                "title": "هنر",
+                "path": "/register"
+            },
+            {
+                "title": "کسب و کار",
+                "path": "/forgot-password"
+            },
+            {
+                "title": "آموزشی",
+                "path": "/reset-password"
+            }
+        ]
+    },
+    {
+        "title": "موسیقی",
+        "icon": "bi bi-music-note-beamed",
+        "childrens": [
+            {
+                "title": "همه دسته بندی",
+                "path": "/profile"
+            },
+            
+            {
+                "title": "راک",
+                "path": "/logout"
+            },
+            {
+                "title": "کلاسیک",
+                "path": "/logout"
+            },
+            {
+                "title": "سنتی",
+                "path": "/logout"
+            },
+            {
+                "title": "رپ",
+                "path": "/logout"
+            }
+        ]
+    },
+    {
+        "title": "کتاب صوتی",
+        "icon": "bi-book",
+        "childrens": [
+            {
+                "title": "همه دسته بندی",
+                "path": "/search"
+            },
+            {
+                "title": "داستان و رمان",
+                "path": "/search"
+            },
+            {
+                "title": "تاریخی",
+                "path": "/search"
+            },
+            {
+                "title": "آموزش زبان",
+                "path": "/search"
+            },
+            {
+                "title": "سیاسی",
+                "path": "/history"   
+            }
+        ]
+    }
+   
+]
