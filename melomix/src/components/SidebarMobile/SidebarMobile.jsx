@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import items from "../../data/sidebar.json";
-import SidebarItem from "../../Container/SidebarItem/SidebarItem";
+import SidebarItem from "../SidebarItem/SidebarItem";
 import {BsMusicNote} from "react-icons/bs"
 
 

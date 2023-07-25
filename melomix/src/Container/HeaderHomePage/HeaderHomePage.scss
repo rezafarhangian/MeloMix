@@ -1,0 +1,33 @@
+@import "../../../scss/variables.scss";
+
+.myCustomSwiper {
+  border-radius: 10px;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.24);
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:hover::after {
+      color: $main-color;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: gray;
+  }
+
+  
+}

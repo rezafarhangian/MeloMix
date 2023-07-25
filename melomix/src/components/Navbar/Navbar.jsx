@@ -7,7 +7,6 @@ import { LiaSearchSolid } from "react-icons/lia";
 import SidebarMobile from "../SidebarMobile/SidebarMobile";
 import {BsMusicNote} from "react-icons/bs"
 
-
 export default function Navbar({openSidebar}) {
 
 
@@ -20,7 +19,7 @@ export default function Navbar({openSidebar}) {
     <>
       <div className="navbar w-100  p-3 ">
         <Row className="d-flex justify-content-between align-items-center  w-100 m-auto ">
-          <Col className="d-flex  align-items-center ">
+          <Col  className="d-flex  align-items-center ">
             <button onClick={handleShow} className="btn-Hamburger p-0 d-lg-none">
               <RxHamburgerMenu className="icon-hamburger  " />
             </button>

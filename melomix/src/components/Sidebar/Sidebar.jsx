@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineClose, AiOutlineHome } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import items from "../../data/sidebar.json";
-import SidebarItem from "../../Container/SidebarItem/SidebarItem";
+import SidebarItem from "../SidebarItem/SidebarItem";
 import "./Sidebar.scss"
 import {BsMusicNote} from "react-icons/bs"
 
@@ -12,7 +12,7 @@ export default function Sidebar({ openSidebar, setOpenSidebar }) {
     <div
       className={`${
         openSidebar ? "opensidebar px-4" : "closesidebar px-0"
-      } sidebar h-100  d-none d-lg-block overflow-y-auto `}
+      } sidebar h-100  d-none d-lg-block overflow-y-auto flex-shrink-0`}
     >
       <div
         className={`${
@@ -24,7 +24,7 @@ export default function Sidebar({ openSidebar, setOpenSidebar }) {
           className="btn-Hamburger p-0 "
         >
           {openSidebar ? (
-            <AiOutlineClose className="icon-hamburger" />
+            <AiOutlineClose className="icon-hamburger " />
           ) : (
             <RxHamburgerMenu className="icon-hamburger" />
           )}
