@@ -20,7 +20,7 @@ export default function App() {
       <div className="w-100 flex-shrink-1  ">
         <Navbar openSidebar={openSidebar} />
 
-        <div className=" p-3  h-100 overflow-y-auto ">
+        <div className="  h-100 overflow-y-auto ">
           {router}
         </div>
       </div>
