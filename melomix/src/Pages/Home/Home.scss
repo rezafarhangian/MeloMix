@@ -1,0 +1,94 @@
+@import "../../../scss/variables.scss";
+
+.music,
+.podcast,
+.audio-book {
+  margin-top: 100px;
+  .music_title,
+  .podcast_title,
+  .audio-book_title {
+    svg {
+      color: $main-color;
+      font-size: 20px;
+    }
+    h6 {
+      color: $main-color;
+      font-weight: 600;
+      margin: 0 5px;
+    }
+    span {
+      color: rgb(172, 162, 162);
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+
+.soundstitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: $sound-color;
+}
+
+.swipercontainers {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  .swiper-sounds {
+    max-width: 1000px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 30px;
+      height: 30px;
+      top: 44%;
+
+      &::after {
+        background-color: rgba(0, 0, 0, 0.24);
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:hover::after {
+        color: $main-color;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: gray;
+    }
+  }
+}
+
+
+.audio-book_content,
+.podcast-content {
+    height: 250px;
+    background-color: #fff;
+
+      div{
+        width: 190px;
+        font-weight: bold;
+        p{
+        }
+
+        svg{
+            font-size: 35px;
+            margin-right: 8px;
+            margin-bottom: 17px;
+        }
+      }
+  }
+  

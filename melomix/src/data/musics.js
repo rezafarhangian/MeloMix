@@ -1,7 +1,7 @@
 const musics = {
     pop: [
         {
-            Singer: "راغب", SongName: "پر رواز", time: "03:31", Description: ` <p>تو پر پروازم باش</p>
+          id : 1 ,  Singer: "راغب", SongName: "پر رواز", time: "03:31", Description: ` <p>تو پر پروازم باش</p>
             <p>بیا و مالک قلبم باش</p>
             <p>تمام فکرم در اختیار تو</p>
             <br />
@@ -38,7 +38,7 @@ const musics = {
         },
 
        
-        { Singer: "امو بند", SongName: "دیوار", time: "03:28", Description: ` <p>دیدی چی شد آخرش عشق تو قسمت کی شد</p>
+        {  id : 2 , Singer: "امو بند", SongName: "دیوار", time: "03:28", Description: ` <p>دیدی چی شد آخرش عشق تو قسمت کی شد</p>
         <p>چیزی که میخواستم و هی نمیشد</p>
         <p>مال من نبود اسم تو انگار تو فال من نبود</p>
         <p>اگه بود این وضع حال من نبود</p>
@@ -68,7 +68,7 @@ const musics = {
         },
 
 
-        { Singer: "اشوان", SongName: "ذره ذره", time: "03:01", Description: `<p>بعد یه عمری سرسری تورو چشم من دید</p>
+        {  id : 3 , Singer: "اشوان", SongName: "ذره ذره", time: "03:01", Description: `<p>بعد یه عمری سرسری تورو چشم من دید</p>
         <p>زیر چشمی خندید خب دل مام لرزید</p>
         <p>نمیدونم واسه این دل پر توقعمه یا توهمه</p>
         <p>ولی حسم عجیبه و پام رو پام بند نیست</p>
@@ -96,7 +96,7 @@ const musics = {
         <p>من موندم و حال بدم واست قید دنیارو زدم</p>
         <p>ببخش اگه فقط همینو بلدم …</p>`, Cover: "../../public/images/CoverMusic/Ashvan-Zare-Zare.jpg", MusicUrl: "../../public/Music/Ashvan - Zare Zare - 128.mp3", Composer: "اشوان", Musician: "اشوان", SongWriter: "اشوان", License: "شرکت رویال هنر", MixingAndMastering: "محمد فلاحی", Regulators: "فرهاد ماهان", YearOfPublication: "", NumberOfBroadcasts: "3050", Comments: [] 
     },
-        { Singer: "آصف آریا", SongName: "هیس", time: "03:12", Description: `<p>شب موهات واسه من بوی عطرم بوی تو</p>
+        {  id : 4 , Singer: "آصف آریا", SongName: "هیس", time: "03:12", Description: `<p>شب موهات واسه من بوی عطرم بوی تو</p>
         <p>رخت عشقت تن من همه جونم واسه تو</p>
         <p>دیدی میلرزه دلم وقتی به من زل میزنی</p>
         <p>چه قشنگ از ته چشمات به دلم پل میزنی</p>
@@ -116,7 +116,7 @@ const musics = {
         <p>هرکی اومد پشت سرت حرف بزنه گفتم هیس</p>
         <p>من غیرتیم سر تو مشکل از اخلاقم نیست</p>`, Cover: "../../public/images/CoverMusic/Asef-Aria-Hiss.jpg", MusicUrl: "../../public/Music/Asef Aria - Hiss (128).mp3", Composer: "مسعود جهانی ", Musician: "آصف آریا و آرشا رادین", SongWriter: "آصف آریا و آرشا رادین", License: "نوای ونوس", MixingAndMastering: "مسعود جهانی", Regulators: "مسعود جهانی", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "امین رستمی", SongName: "دلبر", time: "02:56", Description: `<p>میبینمت دل میشه پر پر این چه حسیه آی دلبر</p>
+        {  id : 5 , Singer: "امین رستمی", SongName: "دلبر", time: "02:56", Description: `<p>میبینمت دل میشه پر پر این چه حسیه آی دلبر</p>
         <p>این عشق میکشه منو آخر این چه حسیه آی دلبر</p>
         <p>با تو آرومه دلم آرومه دلم توی قانون دلم به تو محکومه دلم</p>
         <p>دلبر میبری هوش و حواس از سر دلبر بیا بزنیم به سیم آخر</p>
@@ -138,7 +138,7 @@ const musics = {
         <br />
         <p>دلبر</p>`, Cover: "../../public/images/CoverMusic/Amin-Rostami-Delbar-500x500.jpg", MusicUrl: "../../public/Music/Amin Rostami - Delbar [128].mp3", Composer: "امین رستمی", Musician: "امین رستمی", SongWriter: "امین رستمی", License: "موسسه فرهنگی هنری آوای سرمد", MixingAndMastering: "محمد فلاحی", Regulators: "بهزاد عبدالهی ", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "احمد سلو", SongName: "شازده خانوم", time: "03:18", Description: `<p>بیا جمع و جورم کن از آدما دورم کن</p>
+        {  id : 6 , Singer: "احمد سلو", SongName: "شازده خانوم", time: "03:18", Description: `<p>بیا جمع و جورم کن از آدما دورم کن</p>
         <p>دلگیرم از این دنیا یه نقطه ی کورم کن</p>
         <p>بیا جمع و جورم کن حالم بده خوبم کن</p>
         <p>چشمات همه دنیامه چشاتو مهمونم کن</p>
@@ -163,7 +163,7 @@ const musics = {
     },
     ],
     traditional: [
-        { Singer: "سالار عقیلی", SongName: "کجایی", time: "04:37", Description: `<p>من از بی تو بودن شکستم کجایی،کجایی</p>
+        { id : 1, Singer: "سالار عقیلی", SongName: "کجایی", time: "04:37", Description: `<p>من از بی تو بودن شکستم کجایی،کجایی</p>
         <p>نگو حقمه این همه بی وفایی،کجایی</p>
         <p>هجوم غمت را تحمل ندارم</p>
         <p>نگو که خطا بود این آشنایی،کجایی</p>
@@ -193,7 +193,7 @@ const musics = {
         <p>هجوم غمت را تحمل ندارم</p>
         <p>نگو که خطا بوده این آشنایی،کجایی...</p>`, Cover: "../../public/images/CoverMusic/Salar-Aghili-Kojaei-Musico.ir_.jpg", MusicUrl: "../../public/Music/Salar Aghili - Kojaee (128).mp3", Composer: "اسماعیل خانی", Musician: "", SongWriter: "مریم قاضی", License: "", MixingAndMastering: "امید اصغری", Regulators: "اسماعیل خانی", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "محمدرضا شجریان", SongName: "بارون", time: "04:30", Description: ` <p>ببار ای بارون ببار با دلم گریه کن خون ببار</p>
+        { id : 2, Singer: "محمدرضا شجریان", SongName: "بارون", time: "04:30", Description: ` <p>ببار ای بارون ببار با دلم گریه کن خون ببار</p>
         <p>در شبای تیره چون زلف یار بهر لیلی چو مجنون ببار ای بارون</p>
        <p>دلا خون شو خون ببار بر کوه و دشت و هامون ببار</p>
         <p>دلا خون شو خون ببار بر کوه و دشت و هامون ببار</p>
@@ -215,7 +215,7 @@ const musics = {
         <p>با دلم گریه کن خون ببار در شبای تیره چون زلف یار</p>
         <p>بهر لیلی چو مجنون ببار ای بارون</p>`, Cover: "../../public/images/CoverMusic/baroon.jpg", MusicUrl: "../../public/Music/Mohammadreza Shajarian - Baroon (320).mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "همایون شجریان", SongName: "کولی", time: "05:15", Description: `<p>رفت آن سوار کولی با خود تو را نبرده</p>
+        { id : 3, Singer: "همایون شجریان", SongName: "کولی", time: "05:15", Description: `<p>رفت آن سوار کولی با خود تو را نبرده</p>
 
         <p>شب مانده است وبا شب تاریکی فشرده</p>
         
@@ -243,7 +243,7 @@ const musics = {
         
         <p>رفت آن سوار و با خود یک تار مو نبرده</p>` , Cover: "../../public/images/CoverMusic/Homayon-Shajarian-Koli.jpg", MusicUrl: "../../public/Music/Homayoun Shajarian - Kooli.mp3", Composer: "حمید متبسم", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "علیرضا قربانی", SongName: "پریشانی", time: "04:33", Description: `<p>روزگار من و مویش به پریشانی رفت</p>
+        { id : 4, Singer: "علیرضا قربانی", SongName: "پریشانی", time: "04:33", Description: `<p>روزگار من و مویش به پریشانی رفت</p>
         <p>یک شب آرام رسید یک شب بارانی رفت</p>
         <p>یک شب آمد من مجنون به جنون افتادم</p>
         <p>دل دیوانه ی خود را به نگاهش دادم</p>
@@ -265,7 +265,7 @@ const musics = {
         <p>میروم باز میان همه ی رفتن ها</p>
         <p>باز هم میروم از شهر تو اما تنها  </p>`, Cover: "../../public/images/CoverMusic/Alireza-Ghorbani-Parishani.jpg", MusicUrl: "../../public/Music/Alireza Ghorbani - Parishani (128).mp3", Composer: "حسام ناصری", Musician: "", SongWriter: "احمد میر خلیلی", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "علیرضا افتخاری", SongName: "عاشق شدن", time: "05:13", Description: `<p>دیگه عاشق شدن ناز کشیدن فایده نداره نداره</p>
+        { id : 5, Singer: "علیرضا افتخاری", SongName: "عاشق شدن", time: "05:13", Description: `<p>دیگه عاشق شدن ناز کشیدن فایده نداره نداره</p>
         <p>دیگه دنبال آهو دویدن فایده نداره نداره</p>
         <p>چرا این در و اون در میزنی ای دل غافل</p>
         <p>دیگه دل بستن و دل بریدن فایده نداره</p>
@@ -290,7 +290,7 @@ const musics = {
         <p>دیگه عاشق شدن ناز کشیدن فایده نداره نداره</p>
         <p>دیگه دنبال آهو دویدن فایده نداره نداره</p>`, Cover: "../../public/images/CoverMusic/alireazaeftekhari.jpg", MusicUrl: "../../public/Music/Alireza Eftekhari Ashegh Shodan.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "علی زند وکیلی", SongName: "شهر حسود", time: "04:15", Description: `<p>ما از این شهر غریبه بی تفاوت کوچ کردیم</p>
+        { id : 6, Singer: "علی زند وکیلی", SongName: "شهر حسود", time: "04:15", Description: `<p>ما از این شهر غریبه بی تفاوت کوچ کردیم</p>
         <p>از رفیقا زخم خوردیم تا یه روزی بر نگردیم</p>
         <p>خونمون رو دوشمونه ما یه آه دوره گردیم ما واقعا با هم چه کردیم</p>
         <p>ما غنیمت های بی رویای این جنگای سردیم</p>
@@ -310,7 +310,7 @@ const musics = {
         <p>تلخه اما با هم نبودیم ما آدمای شهر حسودیم خسته از کابوس رفتن</p>
         <p>دور از اون روزای روشن بی تفاوت زیر این سقف کبودیم</p>`, Cover: "../../public/images/CoverMusic/Ali-Zand-Vakili-Shahre-Hasood.jpg", MusicUrl: "../../public/Music/Ali Zand Vakili - Shahre Hasood.mp3", Composer: "علیرضا افکاری", Musician: "سپهر آریا", SongWriter: "حسین غیاثی", License: "", MixingAndMastering: "استودیو نیکا ", Regulators: "اشکان آریا", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] 
     },
-        { Singer: "شهرام ناظری", SongName: "شیرین", time: "04:43", Description: ` <p>کوانی مه یله که ی گیانا! جاری جارانت</p>
+        { id : 7, Singer: "شهرام ناظری", SongName: "شیرین", time: "04:43", Description: ` <p>کوانی مه یله که ی گیانا! جاری جارانت</p>
         <p>کوانی هاتوچووی سه ر هاوارانت ئای بووم هه لاک</p>
         <p>شیرین شیرین ده م بووچک شیرین عمرم ته مامه ئه</p>
         <p>ری ئاخرین قسه م گیانا! هه ر ئاوی تویه ئه ری هه ر</p>
@@ -319,20 +319,21 @@ const musics = {
 
     ],
     moviemusic: [
-        { Singer: "", SongName: "پدرخوانده", time: "04:37", Description: "", Cover: "../../public/images/CoverMusic/Godfather.jpg", MusicUrl: "../../public/Music/Godfather.mp3", Composer: "نینو روتا", Musician: "نینو روتا", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "نینو روتا", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "هرکول پوآرو", time: "04:30", Description: "", Cover: "../../public/images/CoverMusic/Hercule_Poirot.jpg", MusicUrl: "../../public/Music/Hercule_Poirot.mp3", Composer: "کریستوفر گانینگ", Musician: "کریستوفر گانینگ", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "نخستین انسان", time: "05:15", Description: "", Cover: "../../public/images/CoverMusic/man.jpg", MusicUrl: "../../public/Music/man.mp3", Composer: "ولادیمیر هوروویتس", Musician: "ولادیمیر هوروویتس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "گلادیاتور", time: "04:33", Description: "", Cover: "../../public/images/CoverMusic/gladiator.jpg", MusicUrl: "../../public/Music/gladiator.mp3", Composer: "هانس زیمر", Musician: "هانس زیمر", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "فتح بهشت", time: "05:13", Description: "", Cover: "../../public/images/CoverMusic/1492-Conquest-of-Paradise.jpg", MusicUrl: "../../public/Music/Conquest_of_Paradise.mp3", Composer: "ونجلیس", Musician: "ونجلیس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 1, Singer: "", SongName: "پدرخوانده", time: "04:37", Description: "", Cover: "../../public/images/CoverMusic/Godfather.jpg", MusicUrl: "../../public/Music/Godfather.mp3", Composer: "نینو روتا", Musician: "نینو روتا", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "نینو روتا", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 2, Singer: "", SongName: "هرکول پوآرو", time: "04:30", Description: "", Cover: "../../public/images/CoverMusic/Hercule_Poirot.jpg", MusicUrl: "../../public/Music/Hercule_Poirot.mp3", Composer: "کریستوفر گانینگ", Musician: "کریستوفر گانینگ", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 3, Singer: "", SongName: "نخستین انسان", time: "05:15", Description: "", Cover: "../../public/images/CoverMusic/man.jpg", MusicUrl: "../../public/Music/man.mp3", Composer: "ولادیمیر هوروویتس", Musician: "ولادیمیر هوروویتس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 4, Singer: "", SongName: "گلادیاتور", time: "04:33", Description: "", Cover: "../../public/images/CoverMusic/gladiator.jpg", MusicUrl: "../../public/Music/gladiator.mp3", Composer: "هانس زیمر", Musician: "هانس زیمر", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 5, Singer: "", SongName: "فتح بهشت", time: "05:13", Description: "", Cover: "../../public/images/CoverMusic/1492-Conquest-of-Paradise.jpg", MusicUrl: "../../public/Music/Conquest_of_Paradise.mp3", Composer: "ونجلیس", Musician: "ونجلیس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 6, Singer: "", SongName: "فتح بهشت", time: "05:13", Description: "", Cover: "../../public/images/CoverMusic/1492-Conquest-of-Paradise.jpg", MusicUrl: "../../public/Music/Conquest_of_Paradise.mp3", Composer: "ونجلیس", Musician: "ونجلیس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
 
     ],
     relaxingmusic: [
-        { Singer: "", SongName: "صدای باران", time: "", Description: "", Cover: "../../public/images/CoverMusic/rain.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "صدای دریا و پرنده", time: "", Description: "", Cover: "../../public/images/CoverMusic/sea.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "صدای جنگل", time: "", Description: "", Cover: "../../public/images/CoverMusic/jangel.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "صدای پیانو", time: "", Description: "", Cover: "../../public/images/CoverMusic/piano.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "صدای رودخانه", time: "", Description: "", Cover: "../../public/images/CoverMusic/river.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
-        { Singer: "", SongName: "صدای موج دریا", time: "", Description: "", Cover: "../../public/images/CoverMusic/wave.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 1, Singer: "", SongName: "صدای باران", time: "", Description: "", Cover: "../../public/images/CoverMusic/rain.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 2, Singer: "", SongName: "صدای دریا و پرنده", time: "", Description: "", Cover: "../../public/images/CoverMusic/sea.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 3, Singer: "", SongName: "صدای جنگل", time: "", Description: "", Cover: "../../public/images/CoverMusic/jangel.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 4, Singer: "", SongName: "صدای پیانو", time: "", Description: "", Cover: "../../public/images/CoverMusic/piano.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 5, Singer: "", SongName: "صدای رودخانه", time: "", Description: "", Cover: "../../public/images/CoverMusic/river.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
+        { id : 6, Singer: "", SongName: "صدای موج دریا", time: "", Description: "", Cover: "../../public/images/CoverMusic/wave.jpg", MusicUrl: "", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "", NumberOfBroadcasts: "", Comments: [] },
 
     ],
 
