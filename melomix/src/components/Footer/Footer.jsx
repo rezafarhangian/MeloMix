@@ -76,17 +76,17 @@ export default function Footer() {
             <div className="d-flex align-items-center justify-content-center flex-wrap icons-wrapper m-auto mt-md-0 mt-5">
               <img
                 className="bazzar-icon"
-                src="../../../public/images/Footer/bazaar-icon.png"
+                src="/assets/images/Footer/bazaar-icon.png"
                 alt=""
               />
-              <img src="../../../public/images/Footer/android.svg" alt="" />
-              <img src="../../../public/images/Footer/apple-store.svg" alt="" />
-              <img src="../../../public/images/Footer/google-paly.svg" alt="" />
+              <img src="/assets/images/Footer/android.svg" alt="" />
+              <img src="/assets/images/Footer/apple-store.svg" alt="" />
+              <img src="/assets/images/Footer/google-paly.svg" alt="" />
             </div>
 
             <div className="d-flex align-items-center justify-content-center mt-4 namad">
-              <img src="../../../public/images/Footer/enamad.png" alt="" />
-              <img src="../../../public/images/Footer/samandehi.png" alt="" />
+              <img src="/assets/images/Footer/enamad.png" alt="" />
+              <img src="/assets/images/Footer/samandehi.png" alt="" />
             </div>
 
             <div className="media d-flex justify-content-center align-items-center mt-3">

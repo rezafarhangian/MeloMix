@@ -1,0 +1,484 @@
+@import "../../../scss/variables.scss";
+
+.footer-margin {
+  margin-top: 200px !important;
+}
+
+//  =================== single track for mobile screen ====================
+
+.single-track {
+  height: 270px;
+  .single-track-bg {
+    filter: blur(5px);
+    max-height: 280px;
+  }
+
+  .single-track-cover {
+    width: 180px;
+    height: 180px;
+  }
+
+  .single-track-title {
+    color: #fff;
+
+    span {
+      font-weight: 700;
+    }
+    p {
+      font-weight: 600;
+      opacity: 0.8;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  .single-track-details {
+    background-color: #fff;
+  }
+
+  .single-track-share,
+  .single-track-like {
+    color: $sound-color;
+    font-size: 25px;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .single-track-pages {
+    position: relative;
+    .single-track-pages-small {
+      background-color: #fff;
+      color: $sound-color;
+      font-weight: 600;
+      font-size: 15px;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    .border-small1 {
+      height: 4px;
+      border-radius: 5px;
+      position: absolute;
+      width: 35vw;
+      background-color: $main-color;
+      right: 0;
+      transition: 0.5s;
+    }
+    .border-small2 {
+      height: 4px;
+      border-radius: 5px;
+      position: absolute;
+      width: 35vw;
+      background-color: $main-color;
+      right: 32%;
+      transition: 0.5s;
+    }
+    .border-small3 {
+      height: 4px;
+      border-radius: 5px;
+      position: absolute;
+      width: 35vw;
+      right: 65%;
+      background-color: $main-color;
+      transition: 0.5s;
+    }
+  }
+
+  .wrapper-pages {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 15px;
+
+    .description-music {
+      .description-music__title {
+        font-weight: bold;
+      }
+
+      .description-music__content {
+        padding-bottom: 50px;
+        p {
+          font-size: 14px;
+          margin: 5px;
+        }
+      }
+
+      .description-music-datails {
+        p {
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+
+      .description-music-datails-question {
+        font-size: 16px;
+        font-weight: 600;
+        opacity: 0.9;
+      }
+      .description-music-datails-answer {
+        font-size: 15px;
+        font-weight: 700;
+        opacity: 0.8;
+      }
+    }
+
+    // .post-comments {
+    //   .post-comments-form {
+    //     h4 {
+    //       font-weight: 700;
+    //       font-size: 15px;
+    //     }
+    //     form {
+    //       width: 100%;
+    //       background-color: rgba(0, 0, 0, 0.06);
+    //       padding: 8px;
+    //       border-radius: 5px;
+    //       position: relative;
+          
+    //       textarea {
+    //         resize: none;
+    //         width: 100%;
+    //         margin-top: 10px;
+    //         height: 100px;
+    //         background-color: transparent;
+    //         outline: 0;
+    //         border: 0;
+    //         &::placeholder {
+    //           font-size: 14px;
+    //         }
+    //       }
+
+    //       button {
+    //         outline: 0;
+    //         border: 0;
+    //         background-color: $main-color;
+    //         color: #fff;
+    //         padding: 5px 8px;
+    //         border-radius: 5px;
+    //         font-size: 14px;
+    //         display: inline-block;
+    //         margin: 0 auto;
+    //       }
+
+    //       a{
+    //         position: absolute;
+    //         left: 9px;
+    //         bottom: 9px;
+    //       }
+    //     }
+    //   }
+
+    //   .empty-comment-box{
+    //       span{
+    //         color: #979797;
+    //       }
+    //   }
+
+    //   .comments-box{
+    //     background-color: $body-color;
+
+    //     .comment{
+    //       background-color: #fff;
+    //       min-height: 140px;
+    //       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    //       .comment-profile span:nth-child(1){
+
+    //          background-color: #979797;
+    //          width: 35px;
+    //          height: 35px;
+    //          border-radius: 50%;
+    //          display: inline-block;
+    //          display: flex;
+    //          justify-content: center;
+    //          align-items: center;
+    //          margin-left: 8px;
+    //          svg{
+    //           color: #fff;
+    //          }
+    //       }
+           
+    //       .comment-date{
+    //         font-size: 13px;
+    //         color: #979797;
+    //       }
+
+    //       .conmment-text{
+    //         color: #797979;
+    //       }
+
+    //       .comment-reply-btn{
+    //         margin-left: 10px;
+    //         border: 0;
+    //         outline: none;
+    //         color: #797979;
+    //         background-color: transparent;
+
+    //         span{
+    //           font-weight: 600;
+    //         }
+    //         svg{
+    //           margin-right: 5px;
+    //           font-size: 22px;
+    //         }
+    //       }
+
+         
+    //     }
+    //   }
+    // }
+   
+  }
+
+
+
+}
+
+//  =================== single track for desktop screen ====================
+.single-track-large {
+  max-width: 800px;
+  margin-top: 100px;
+
+  .pages{
+    background-color: #fff;
+    margin-top: 5px;
+
+    .description-music__content{
+      font-size: 15px;
+    }
+
+    .description-music-datails-question {
+      font-size: 16px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    .description-music-datails-answer {
+      font-size: 15px;
+      opacity: 0.8;
+    }
+  }
+}
+.single-track-content {
+  height: 120px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  span {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    position: absolute;
+    top: -80px;
+    right: 20px;
+  }
+
+  .details {
+    position: absolute;
+    right: 220px;
+    top: 30px;
+    color: $sound-color;
+    h6 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+  }
+
+  .like-share {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+
+    div {
+      width: 40px;
+      height: 40px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      margin: 8px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $sound-color;
+      font-size: 25px;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}
+.single-track-pages-larg {
+  position: relative;
+  width: 270px;
+  div div {
+    width: 90px;
+    font-weight: bold;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .border1 {
+    height: 4px;
+    border-radius: 5px;
+    width: 90px;
+    position: absolute;
+    background-color: $main-color;
+    right: 0;
+    transition: 0.5s;
+  }
+  .border2 {
+    height: 4px;
+    border-radius: 5px;
+    width: 90px;
+    position: absolute;
+    background-color: $main-color;
+    right: 90px;
+    transition: 0.5s;
+  }
+  .border3 {
+    height: 4px;
+    border-radius: 5px;
+    width: 90px;
+    position: absolute;
+    background-color: $main-color;
+    right: 180px;
+    transition: 0.5s;
+  }
+}
+
+// ========================= Shared classes between mobile and desktop sizes ==========================
+
+.single-track-time,
+.single-track-repet,
+.single-track-date {
+  color: $sound-color;
+  font-size: 13px;
+  opacity: 0.7;
+  svg {
+    font-size: 16px;
+  }
+}
+.active-page {
+  opacity: 1;
+  color: $main-color;
+}
+
+
+
+
+
+// 888888888888888888888888888888888888888888888888888888888
+
+
+
+.post-comments {
+  background-color: #fff;
+  .post-comments-form {
+    h4 {
+      font-weight: 700;
+      font-size: 15px;
+    }
+    form {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.06);
+      padding: 8px;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
+      color: #797979;            
+      font-size: 13px;
+
+      
+      textarea {
+        resize: none;
+        width: 100%;
+        margin-top: 10px;
+        height: 100px;
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+
+      button {
+        outline: 0;
+        border: 0;
+        background-color: $main-color;
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-size: 14px;
+        display: inline-block;
+        margin: 0 auto;
+      }
+
+      a{
+        position: absolute;
+        left: 9px;
+        bottom: 9px;
+      }
+    }
+  }
+
+  .empty-comment-box{
+      span{
+        color: #979797;
+      }
+  }
+
+  .comments-box{
+
+    .comment{
+      background-color: #fff;
+      min-height: 140px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      .comment-profile span:nth-child(1){
+
+         background-color: #979797;
+         width: 35px;
+         height: 35px;
+         border-radius: 50%;
+         display: inline-block;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-left: 8px;
+         svg{
+          color: #fff;
+         }
+      }
+       
+      .comment-date{
+        font-size: 13px;
+        color: #979797;
+      }
+
+      .conmment-text{
+        color: #797979;
+      }
+
+      .comment-reply-btn{
+        margin-left: 10px;
+        border: 0;
+        outline: none;
+        color: #797979;
+        background-color: transparent;
+
+        span{
+          font-weight: 600;
+        }
+        svg{
+          margin-right: 5px;
+          font-size: 22px;
+        }
+      }
+
+     
+    }
+  }
+}

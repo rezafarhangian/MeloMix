@@ -4,10 +4,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer {
-  margin-top: auto;
+  // margin-top: auto;
   height: 800px;
   background-color: $bg-footer;
   margin-top: 60px;

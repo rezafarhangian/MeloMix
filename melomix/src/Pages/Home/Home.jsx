@@ -1,6 +1,5 @@
 import React from "react";
 import HeaderHomePage from "../../Container/HeaderHomePage/HeaderHomePage";
-import DOMPurify from "dompurify";
 import Footer from "../../components/Footer/Footer";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { MdPodcasts } from "react-icons/md";
@@ -8,6 +7,7 @@ import { CiFaceFrown } from "react-icons/ci";
 import Container from "react-bootstrap/Container";
 import "./Home.scss";
 import musics from "../../data/musics";
+import {Link} from 'react-router-dom'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";
@@ -18,31 +18,11 @@ import "swiper/css/navigation";
 
 import Sound from "../../components/Sound/Sound";
 
+
 export default function Home() {
   return (
     <div className="mb-5 page-container">
       <HeaderHomePage />
-
-      {/* <div className="mt-5 ">
-        {song.moviemusic.map((p, index) => (
-          <div key={index}>
-            <p>{p.License}</p>
-            <p>{p.Musician}</p>
-            <p>{p.SongName}</p>
-            <p>{p.Singer}</p>
-            <img src={p.Cover} alt="Error" />
-            <audio controls>
-              <source src={p.MusicUrl} type="audio/mpeg" />
-            </audio>
-            <div
-              className="bg-body-secondary lh-sm"
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(p.Description),
-              }}
-            />
-          </div>
-        ))}
-      </div> */}
 
       <div className="music">
         <Container>
@@ -84,11 +64,13 @@ export default function Home() {
               >
                 {musics.pop.map((m) => (
                   <SwiperSlide key={m.id} className="">
-                    <Sound
-                      cover={m.Cover}
-                      singer={m.Singer}
-                      musicname={m.SongName}
-                    />
+                    <Link to={`music/${m.category}/${m.SongName}`}>
+                      <Sound
+                        cover={m.Cover}
+                        singer={m.Singer}
+                        musicname={m.SongName}
+                      />
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -122,11 +104,13 @@ export default function Home() {
               >
                 {musics.traditional.map((m) => (
                   <SwiperSlide key={m.id} className="">
-                    <Sound
-                      cover={m.Cover}
-                      singer={m.Singer}
-                      musicname={m.SongName}
-                    />
+                    <Link to={`music/${m.category}/${m.SongName}`}>
+                      <Sound
+                        cover={m.Cover}
+                        singer={m.Singer}
+                        musicname={m.SongName}
+                      />
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -160,11 +144,13 @@ export default function Home() {
               >
                 {musics.moviemusic.map((m) => (
                   <SwiperSlide key={m.id} className="">
-                    <Sound
-                      cover={m.Cover}
-                      singer={m.Singer}
-                      musicname={m.SongName}
-                    />
+                    <Link to={`music/${m.category}/${m.SongName}`}>
+                      <Sound
+                        cover={m.Cover}
+                        singer={m.Singer}
+                        musicname={m.SongName}
+                      />
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -198,11 +184,13 @@ export default function Home() {
               >
                 {musics.relaxingmusic.map((m) => (
                   <SwiperSlide key={m.id} className="">
-                    <Sound
-                      cover={m.Cover}
-                      singer={m.Singer}
-                      musicname={m.SongName}
-                    />
+                    <Link to={`music/${m.category}/${m.SongName}`}>
+                      <Sound
+                        cover={m.Cover}
+                        singer={m.Singer}
+                        musicname={m.SongName}
+                      />
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
