@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./Music.scss";
 import Footer from "../../components/Footer/Footer";
 import { Container } from "react-bootstrap";
-import { BiTimeFive, BiSolidShareAlt, BiHeart } from "react-icons/bi";
+import { BiTimeFive, BiSolidShareAlt, BiHeart, BiSolidHeart } from "react-icons/bi";
 import { BsPlayCircle, BsCalendarDate, BsFillReplyFill } from "react-icons/bs";
 
 import { FaUser, FaPlay } from "react-icons/fa";
@@ -15,8 +15,18 @@ import PlaceholderImage from "../../../public/assets/images/CoverMusic/placehold
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
+import Swal from "sweetalert2";
+
+
+
 
 export default function Music() {
+
+
+
+ 
+
+
   const [music, setMusic] = useState({});
   const [pages, setPages] = useState(1);
   const [openForm, setOpenForm] = useState(false);
@@ -24,9 +34,12 @@ export default function Music() {
   const { title, category } = useParams();
 
   const [isPlaying, setIsPlaying] = useState(false);
-    
-  const [showPlayer, setShowPlayer] = useState(false)
-  
+
+  const [showPlayer, setShowPlayer] = useState(false);
+
+  const [liked, setliked] = useState(false)
+
+ 
 
   useEffect(() => {
     switch (category) {
@@ -60,6 +73,27 @@ export default function Music() {
         break;
     }
   }, [title, category]);
+
+  const copyTextInclipBoard = () => {
+    navigator.clipboard.writeText(window.location.href);
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: "success",
+      title: "لینک کپی شد",
+    });
+  };
 
   return (
     <>
@@ -109,12 +143,16 @@ export default function Music() {
                 </div>
               </div>
               <div className="d-flex align-items-center">
-                <div className="single-track-like ms-2 ms-sm-3">
-                  <BiHeart />
-                </div>
-                <div className="single-track-share">
+                
+                <button className="single-track-like ms-2 ms-sm-3" onClick={() => setliked(!liked)}>
+                        {liked ?   <BiSolidHeart className="heart"/> :    <BiHeart /> }
+                      </button>
+                <button
+                  onClick={copyTextInclipBoard}
+                  className="single-track-share"
+                >
                   <BiSolidShareAlt />
-                </div>
+                </button>
               </div>
             </div>
 
@@ -476,12 +514,12 @@ export default function Music() {
                     </div>
 
                     <div className="d-flex like-share">
-                      <div>
-                        <BiHeart />
-                      </div>
-                      <div>
+                      <button onClick={() => setliked(!liked)}>
+                        {liked ?   <BiSolidHeart className="heart"/> :    <BiHeart /> }
+                      </button>
+                      <button onClick={copyTextInclipBoard}>
                         <BiSolidShareAlt />
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -534,19 +572,16 @@ export default function Music() {
                           1. {music.SongName}
                         </span>
                         <div className="d-flex align-items-center">
-                        
                           <div className="px-2 single-track-date ms-3 mt-1">
                             <BiTimeFive className="ms-1 mb-1" />
                             <span>{music.time}</span>
                           </div>
                           {!isPlaying ? (
                             <button
-                              onClick={() => 
-                              {
-                                setIsPlaying(true)
-                                setShowPlayer(true)
-                              }
-                                }
+                              onClick={() => {
+                                setIsPlaying(true);
+                                setShowPlayer(true);
+                              }}
                               className="border-0 btn-play d-flex justify-content-center align-items-center ms-1"
                             >
                               <FaPlay className="text-white" />
@@ -846,8 +881,16 @@ export default function Music() {
 
         {/* ======== Audio Player ========= */}
         {isPlaying && (
-          <div className={` position-fixed bottom-0 start-0 end-0  player flex-column flex-md-row`}>
-              <AudioPlayerrrr setIsPlayinggg={setIsPlaying} musicsrc={music.MusicUrl} coverMusic={music.Cover} SongName={music.SongName} Singer={music.Singer}/>
+          <div
+            className={` position-fixed bottom-0 start-0 end-0  player flex-column flex-md-row`}
+          >
+            <AudioPlayerrrr
+              setIsPlayinggg={setIsPlaying}
+              musicsrc={music.MusicUrl}
+              coverMusic={music.Cover}
+              SongName={music.SongName}
+              Singer={music.Singer}
+            />
           </div>
         )}
       </div>

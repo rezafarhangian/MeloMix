@@ -28,7 +28,7 @@ export default function HeaderHomePage() {
         modules={[Navigation, Pagination, Autoplay]}
         className="myCustomSwiper"
       >
-        <SwiperSlide className="w-100 h-100  px-1">
+        <SwiperSlide className="w-100   px-1">
           <LazyLoadImage
             src="/assets/images/HeaderHomePage/banner1.jpg"
             className="img-fluid rounded-2"
@@ -39,9 +39,9 @@ export default function HeaderHomePage() {
            
           />
         </SwiperSlide>
-        <SwiperSlide className="w-100 h-100  px-1">
+        <SwiperSlide className="w-100   px-1">
           <LazyLoadImage
-            src="/assets/images/HeaderHomePage/banner1.jpg"
+            src="/assets/images/HeaderHomePage/banner2.jpg"
             className="img-fluid rounded-2"
             placeholderSrc={PlaceholderImage}
             effect="blur"
@@ -50,9 +50,9 @@ export default function HeaderHomePage() {
            
           />
         </SwiperSlide>
-        <SwiperSlide className="w-100 h-100  px-1 ">
+        <SwiperSlide className="w-100   px-1 ">
           <LazyLoadImage
-            src="/assets/images/HeaderHomePage/banner1.jpg"
+            src="/assets/images/HeaderHomePage/banner3.jpg"
             className="img-fluid rounded-2"
             placeholderSrc={PlaceholderImage}
             effect="blur"
@@ -61,9 +61,9 @@ export default function HeaderHomePage() {
            
           />
         </SwiperSlide>
-        <SwiperSlide className="w-100 h-100  px-1">
+        <SwiperSlide className="w-100   px-1">
           <LazyLoadImage
-            src="/assets/images/HeaderHomePage/banner1.jpg"
+            src="/assets/images/HeaderHomePage/banner4.jpg"
             className="img-fluid rounded-2"
             placeholderSrc={PlaceholderImage}
             effect="blur"
@@ -71,9 +71,9 @@ export default function HeaderHomePage() {
            
           />
         </SwiperSlide>
-        <SwiperSlide className="w-100 h-100  px-1">
+        <SwiperSlide className="w-100   px-1">
           <LazyLoadImage
-            src="/assets/images/HeaderHomePage/banner1.jpg"
+            src="/assets/images/HeaderHomePage/banner5.jpg"
             className="img-fluid rounded-2"
             placeholderSrc={PlaceholderImage}
             effect="blur"

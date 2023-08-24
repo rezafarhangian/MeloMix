@@ -1,0 +1,63 @@
+@import "../../../scss/variables.scss";
+
+
+.login-form{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 270px;
+    margin:70px auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+
+    .login-input{
+        outline: none;
+        border: 1px solid rgb(175, 175, 175);
+        background-color: transparent;
+        border-radius: 5px;
+        width: 100%;
+        padding: 5px;
+        color: rgb(36, 36, 36);
+    }
+    label{
+       margin-bottom: 5px;
+       font-size: 13px;
+       color: gray;
+    }
+    .btn-login{
+      width: 100%;
+      border: 0;
+      outline: none;
+      padding: 5px;
+      background-color:$main-color;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    span{
+        font-size: 12px;
+        color: gray;
+    }
+
+    .toggle-icon{
+        background-color: #fff;
+        border: 0;
+        outline: none;
+        color: rgb(70, 68, 68);
+        left: 5px;
+        top: 30px;
+        svg{
+            font-size: 22px;
+        }
+    }
+
+    
+}
+
+
+
+@media all and (min-width : 995px) {
+    .login-form{
+        width: 300px;
+     }
+}

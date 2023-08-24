@@ -1,7 +1,8 @@
 [
     {
         "title": "صفحه اصلی",
-        "icon": "bi bi-house"
+        "icon": "bi bi-house",
+        "path" : "/"
         
     },
     {
@@ -32,24 +33,24 @@
         "childrens": [
             {
                 "title": "همه دسته بندی",
-                "path": "/profile"
+                "path": "/"
             },
             
             {
                 "title": "راک",
-                "path": "/logout"
+                "path": "/"
             },
             {
                 "title": "کلاسیک",
-                "path": "/logout"
+                "path": "/"
             },
             {
                 "title": "سنتی",
-                "path": "/logout"
+                "path": "/"
             },
             {
                 "title": "رپ",
-                "path": "/logout"
+                "path": "/"
             }
         ]
     },
@@ -59,25 +60,30 @@
         "childrens": [
             {
                 "title": "همه دسته بندی",
-                "path": "/search"
+                "path": "/"
             },
             {
                 "title": "داستان و رمان",
-                "path": "/search"
+                "path": "/"
             },
             {
                 "title": "تاریخی",
-                "path": "/search"
+                "path": "/"
             },
             {
                 "title": "آموزش زبان",
-                "path": "/search"
+                "path": "/"
             },
             {
                 "title": "سیاسی",
-                "path": "/history"   
+                "path": "/"   
             }
         ]
+    },
+    {
+        "title": "علاقه مندی ها",
+        "icon": "bi bi-heart",
+        "path" : "/liked"
     }
    
 ]

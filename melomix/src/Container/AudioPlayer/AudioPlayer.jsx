@@ -289,7 +289,7 @@ export default function AudioPlayer({setIsPlayinggg, musicsrc, coverMusic ,SongN
               step="0.1"
               value={volume}
               onChange={handleVolumeChange}
-              className="e-volume mb-1 "
+              className="e-volume  "
             />
           </div>
         </div>

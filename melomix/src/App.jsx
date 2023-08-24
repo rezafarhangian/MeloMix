@@ -5,15 +5,7 @@ import Container from "react-bootstrap/Container";
 import Sidebar from "../src/components/Sidebar/Sidebar";
 import Navbar from "./components/Navbar/Navbar";
 
-function ScrollToTop() {
-  const {pathname}  = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname ]);
-
-  return null;
-}
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default function App() {
   const router = useRoutes(Routes);
@@ -27,9 +19,7 @@ export default function App() {
         <Navbar openSidebar={openSidebar} />
 
         <div className="  h-100 overflow-y-auto ">
-
           {router}
-          {/* <ScrollToTop /> */}
         </div>
       </div>
     </div>

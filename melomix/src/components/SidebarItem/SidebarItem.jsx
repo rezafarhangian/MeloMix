@@ -47,7 +47,7 @@ export default function SidebarItem({ item, openSidebar, setOpenSidebar }) {
     );
   } else {
     return (
-      <Link to="/" className={`sidebar-item plain p-1 d-flex align-items-center ${openSidebar ? "justify-content-start" : "justify-content-center"}`} >
+      <Link to={item.path} className={`sidebar-item plain p-1 d-flex align-items-center ${openSidebar ? "justify-content-start" : "justify-content-center"}`} >
         {item.icon && <i className={item.icon}></i>}
         <p className={`${openSidebar ? "d-block" : "d-none"} my-auto fw-bold`}>{item.title}</p>
       </Link>

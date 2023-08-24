@@ -6,6 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { LiaSearchSolid } from "react-icons/lia";
 import SidebarMobile from "../SidebarMobile/SidebarMobile";
 import {BsMusicNote} from "react-icons/bs"
+import { Link } from "react-router-dom";
 
 export default function Navbar({openSidebar}) {
 
@@ -38,8 +39,10 @@ export default function Navbar({openSidebar}) {
           </Col>
 
           <Col xs={5} className=" d-flex justify-content-end ">
-            <button className="login-btn px-md-3 py-md-2  ">
+            <button className="login-btn  ">
+              <Link to="/login" className="text-white h-100 w-100  px-md-2 py-md-2">
               ورود / ثبت نام
+              </Link>
             </button>
           </Col>
         </Row>

@@ -28,12 +28,13 @@
   .swiper-pagination-bullet-active {
     background-color: gray;
   }
-
-  .lazy-load-image-background.black-and-white {
+    
+  .lazy-load-image-background,
+  .black-and-white {
     height: 100px !important;
   }
 
-  .lazy-load-image-background.lazy-load-image-loaded.black-and-white {
+  .lazy-load-image-loaded {
     height: auto !important;
   }
 }
@@ -43,11 +44,11 @@
 
 @media all and (min-width: 950px) {
   .myCustomSwiper {
-    .lazy-load-image-background.black-and-white {
+    .lazy-load-image-background,.black-and-white {
       height: 340px !important;
     }
   
-    .lazy-load-image-background.lazy-load-image-loaded.black-and-white {
+    .lazy-load-image-loaded {
       height: auto !important;
     }
   }
