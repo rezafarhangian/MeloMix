@@ -1,0 +1,335 @@
+.audio-player,
+.audio-player-mobile {
+  direction: ltr;
+}
+
+
+.close-player{
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  svg{
+    color: #fff;
+    font-size: 28px;
+  }
+}
+
+.audio-details{
+  width: 70%;
+
+
+    .currentTime{
+      left: 15px;
+      top: 45px;
+      font-size: 12px;
+    }
+    .duration{
+           right: 0;
+           top: -20px;
+           font-size: 12px;
+    }  
+
+    .btn-play-puase{
+      // left: 50%;
+      right: 50%;
+      top: -35px;
+    }
+}
+.btn-play-pause {
+  outline: 0;
+
+  svg {
+    color: #fff;
+    font-size: 38px;
+  }
+}
+
+.btn-SkipBackward,
+.btn-SkipForward {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  svg{
+    color: #fff;
+    font-size: 25px;
+  }
+}
+
+.btn-volume{
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  svg{
+    font-size: 20px;
+    color: #fff;
+
+  }
+}
+
+
+
+
+.player-details{
+
+  img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+  }
+
+   .song-name{
+
+   }
+
+  .singer-name{
+    color: gray;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+// *********************************************************
+
+.input-range-mobile{
+  width: 90vw;
+  margin: 0 auto;
+
+   .currentTime-2{
+        top: -20px;
+        left: 0;
+        font-size: 12px;
+   }
+
+   .duration-2{
+      top: -20px;
+      right: 0;
+      font-size: 12px;
+   }  
+
+
+  }
+  .player-details-2{
+
+   img{
+     width: 90px;
+     height: 90px;
+     border-radius: 5px;
+   }
+ 
+  
+ 
+   .singer-name{
+     color: gray;
+     font-size: 12px;
+     margin-top: 5px;
+   }
+ }
+
+
+// ===================================== Style input type range ========================================
+$height: 15px;
+$thumb-height: 13px;
+$track-height: 3px;
+
+// colours
+$upper-color: gray;
+$lower-color: #fff;
+$thumb-color: #fff;
+
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100%
+  50% / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100%
+  50% / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: #{$i}px 0 0 -#{($thumb-height - $track-height) / 2} #{$upper-color};
+  @if $i == 1 {
+    @for $k from 2 through 1000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+  @return $val;
+}
+
+.e-range {
+  display: block;
+  appearance: none;
+  width: 50%;
+  margin: 0;
+  height: $height;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0 15px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Webkit
+.e-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $height;
+  background: $lower-background;
+}
+
+.e-range::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  top: 50%;
+  margin-top: (-$thumb-height/2);
+  box-shadow: webkit-slider-thumb-shadow();
+  transition: background-color 150ms;
+}
+
+// Firefox
+.e-range::-moz-range-track,
+.e-range::-moz-range-progress {
+  width: 100%;
+  height: $height;
+  background: $upper-background;
+}
+
+.e-range::-moz-range-progress {
+  background: $lower-background;
+}
+
+.e-range::-moz-range-thumb {
+  appearance: none;
+  margin: 0;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+}
+
+// Internet Exploder
+.e-range::-ms-track {
+  width: 100%;
+  height: $height;
+  border: 0;
+  color: transparent;
+  background: transparent;
+}
+
+.e-range::-ms-fill-lower {
+  background: $lower-background;
+}
+
+.e-range::-ms-fill-upper {
+  background: $upper-background;
+}
+
+.e-range::-ms-thumb {
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+  top: 0;
+  margin: 0;
+  box-shadow: none;
+}
+//  ===================================
+
+
+.e-volume {
+  display: block;
+  appearance: none;
+  width: 50%;
+  margin: 0;
+  height: $height;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+  margin-left: 5px;
+  // margin: 0 15px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.e-volume::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $height;
+  background: $lower-background;
+}
+
+.e-volume::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  top: 50%;
+  margin-top: (-$thumb-height/2);
+  box-shadow: webkit-slider-thumb-shadow();
+  transition: background-color 150ms;
+}
+
+// Firefox
+.e-volume::-moz-range-track,
+.e-volume::-moz-range-progress {
+  width: 100%;
+  height: $height;
+  background: $upper-background;
+}
+
+.e-volume::-moz-range-progress {
+  background: $lower-background;
+}
+
+.e-volume::-moz-range-thumb {
+  appearance: none;
+  margin: 0;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+}
+
+// Internet Exploder
+.e-volume::-ms-track {
+  width: 100%;
+  height: $height;
+  border: 0;
+  color: transparent;
+  background: transparent;
+}
+
+.e-volume::-ms-fill-lower {
+  background: $lower-background;
+}
+
+.e-volume::-ms-fill-upper {
+  background: $upper-background;
+}
+
+.e-volume::-ms-thumb {
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+  top: 0;
+  margin: 0;
+  box-shadow: none;
+}

@@ -133,7 +133,7 @@
     //       padding: 8px;
     //       border-radius: 5px;
     //       position: relative;
-          
+
     //       textarea {
     //         resize: none;
     //         width: 100%;
@@ -196,7 +196,7 @@
     //           color: #fff;
     //          }
     //       }
-           
+
     //       .comment-date{
     //         font-size: 13px;
     //         color: #979797;
@@ -222,15 +222,18 @@
     //         }
     //       }
 
-         
     //     }
     //   }
     // }
-   
   }
 
-
-
+  .btn-play {
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $main-color;
+  }
 }
 
 //  =================== single track for desktop screen ====================
@@ -238,11 +241,11 @@
   max-width: 800px;
   margin-top: 100px;
 
-  .pages{
+  .pages {
     background-color: #fff;
     margin-top: 5px;
 
-    .description-music__content{
+    .description-music__content {
       font-size: 15px;
     }
 
@@ -254,6 +257,14 @@
     .description-music-datails-answer {
       font-size: 15px;
       opacity: 0.8;
+    }
+
+    .btn-play {
+      outline: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $main-color;
     }
   }
 }
@@ -365,13 +376,7 @@
   color: $main-color;
 }
 
-
-
-
-
-// 888888888888888888888888888888888888888888888888888888888
-
-
+// =====================================================
 
 .post-comments {
   background-color: #fff;
@@ -386,11 +391,11 @@
       padding: 8px;
       border-radius: 5px;
       position: relative;
-      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
-      color: #797979;            
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      color: #797979;
       font-size: 13px;
 
-      
       textarea {
         resize: none;
         width: 100%;
@@ -416,7 +421,7 @@
         margin: 0 auto;
       }
 
-      a{
+      a {
         position: absolute;
         left: 9px;
         bottom: 9px;
@@ -424,61 +429,170 @@
     }
   }
 
-  .empty-comment-box{
-      span{
-        color: #979797;
-      }
+  .empty-comment-box {
+    span {
+      color: #979797;
+    }
   }
 
-  .comments-box{
-
-    .comment{
+  .comments-box {
+    .comment {
       background-color: #fff;
       min-height: 140px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
-      .comment-profile span:nth-child(1){
-
-         background-color: #979797;
-         width: 35px;
-         height: 35px;
-         border-radius: 50%;
-         display: inline-block;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         margin-left: 8px;
-         svg{
+      .comment-profile span:nth-child(1) {
+        background-color: #979797;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8px;
+        svg {
           color: #fff;
-         }
+        }
       }
-       
-      .comment-date{
+
+      .comment-date {
         font-size: 13px;
         color: #979797;
       }
 
-      .conmment-text{
+      .conmment-text {
         color: #797979;
       }
 
-      .comment-reply-btn{
+      .comment-reply-btn {
         margin-left: 10px;
         border: 0;
         outline: none;
         color: #797979;
         background-color: transparent;
 
-        span{
+        span {
           font-weight: 600;
         }
-        svg{
+        svg {
           margin-right: 5px;
           font-size: 22px;
         }
       }
-
-     
     }
   }
+}
+
+// ====================================================
+
+.wave-menu {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: ease 0.2s;
+  background: #f39c12;
+}
+
+.wave-menu li {
+  list-style: none;
+  height: 30px;
+  width: 3px;
+  border-radius: 10px;
+  background: #fff;
+  margin: 0 1px;
+  padding: 0;
+  animation-name: wave1;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease 0.2s;
+}
+
+.wave-menu li:nth-child(1) {
+  animation-name: wave1;
+  animation-delay: 0.2s;
+  transform: scaleY(0.2);
+}
+
+.wave-menu li:nth-child(2) {
+  animation-name: wave2;
+  animation-delay: 0.23s;
+  animation-duration: 0.4s;
+  transform: scaleY(0.3);
+}
+
+.wave-menu li:nth-child(3) {
+  animation-name: wave3;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+  transform: scaleY(0.4);
+}
+
+.wave-menu li:nth-child(4) {
+  animation-name: wave2;
+  animation-delay: 0.23s;
+  animation-duration: 0.4s;
+  transform: scaleY(0.3);
+}
+
+.wave-menu li:nth-child(5) {
+  animation-name: wave1;
+  animation-delay: 0.2s;
+  transform: scaleY(0.2);
+}
+
+@keyframes wave1 {
+  from {
+    transform: scaleY(0.2);
+  }
+
+  to {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    transform: scaleY(0.3);
+  }
+
+  to {
+    transform: scaleY(0.4);
+  }
+}
+
+@keyframes wave3 {
+  from {
+    transform: scaleY(0.5);
+  }
+
+  to {
+    transform: scaleY(0.6);
+  }
+}
+
+// =====================================================
+.player {
+  // height: 100px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: #222a38;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  .open-player{
+    background-color: transparent;
+    svg{
+      color:#ffff;
+      font-size: 25px;
+    }
+  }
+
+
+}
+.openPlayerMobile{
+  height: 350px;
 }

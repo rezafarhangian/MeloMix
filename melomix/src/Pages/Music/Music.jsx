@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Music.scss";
 import Footer from "../../components/Footer/Footer";
 import { Container } from "react-bootstrap";
 import { BiTimeFive, BiSolidShareAlt, BiHeart } from "react-icons/bi";
 import { BsPlayCircle, BsCalendarDate, BsFillReplyFill } from "react-icons/bs";
-import { FaUser } from "react-icons/fa";
-import AudioPlayer from "../../Container/AudioPlayer/AudioPlayer";
+
+import { FaUser, FaPlay } from "react-icons/fa";
+import AudioPlayerrrr from "../../Container/AudioPlayer/AudioPlayer";
 import { Link, useParams } from "react-router-dom";
 import musics from "../../data/musics";
 import DOMPurify from "dompurify";
@@ -14,12 +15,18 @@ import PlaceholderImage from "../../../public/assets/images/CoverMusic/placehold
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
+
 export default function Music() {
   const [music, setMusic] = useState({});
   const [pages, setPages] = useState(1);
   const [openForm, setOpenForm] = useState(false);
 
   const { title, category } = useParams();
+
+  const [isPlaying, setIsPlaying] = useState(false);
+    
+  const [showPlayer, setShowPlayer] = useState(false)
+  
 
   useEffect(() => {
     switch (category) {
@@ -153,8 +160,32 @@ export default function Music() {
 
             <div className="wrapper-pages h-auto">
               {pages === 1 && (
-                <div>
-                  <AudioPlayer />
+                <div className="">
+                  <div className="d-flex justify-content-between align-items-center p-2 ">
+                    <span className=" pt-1 fw-bold">1. {music.SongName}</span>
+                    <div className="d-flex align-items-center">
+                      <div className="px-2 single-track-date ms-3 mt-1 ">
+                        <BiTimeFive className="ms-1 mb-1" />
+                        <span>{music.time}</span>
+                      </div>
+                      {!isPlaying ? (
+                        <button
+                          onClick={() => setIsPlaying(true)}
+                          className="border-0 btn-play d-flex justify-content-center align-items-center ms-1"
+                        >
+                          <FaPlay className="text-white" />
+                        </button>
+                      ) : (
+                        <ul className="wave-menu rounded-5 d-flex justify-content-center align-items-center p-0 m-0 position-relative">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      )}
+                    </div>
+                  </div>
                 </div>
               )}
               {pages === 2 && (
@@ -416,7 +447,7 @@ export default function Music() {
                 <div>
                   <div className="d-flex justify-content-end">
                     <div className="px-2 single-track-date border-start">
-                      <BsCalendarDate className="ms-1" />
+                      <BiTimeFive className="ms-1 " />
                       <span>{music.time}</span>
                     </div>
                     <div className="px-2 single-track-repet border-start">
@@ -424,7 +455,7 @@ export default function Music() {
                       <span>{music.NumberOfBroadcasts}</span>
                     </div>
                     <div className="px-2 single-track-time ">
-                      <BiTimeFive className="ms-1 " />
+                      <BsCalendarDate className="ms-1" />
                       <span>{music.YearOfPublication}</span>
                     </div>
                   </div>
@@ -496,7 +527,43 @@ export default function Music() {
                 </div>
 
                 <div>
-                  {pages === 1 && <div className="pages">موزیک</div>}
+                  {pages === 1 && (
+                    <div className="pages ">
+                      <div className="d-flex justify-content-between align-items-center py-3 px-4">
+                        <span className=" pt-1 fw-bold">
+                          1. {music.SongName}
+                        </span>
+                        <div className="d-flex align-items-center">
+                        
+                          <div className="px-2 single-track-date ms-3 mt-1">
+                            <BiTimeFive className="ms-1 mb-1" />
+                            <span>{music.time}</span>
+                          </div>
+                          {!isPlaying ? (
+                            <button
+                              onClick={() => 
+                              {
+                                setIsPlaying(true)
+                                setShowPlayer(true)
+                              }
+                                }
+                              className="border-0 btn-play d-flex justify-content-center align-items-center ms-1"
+                            >
+                              <FaPlay className="text-white" />
+                            </button>
+                          ) : (
+                            <ul className="wave-menu rounded-5 d-flex justify-content-center align-items-center p-0 m-0 position-relative">
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                            </ul>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   {pages === 2 && (
                     <div className="pages p-3">
                       <div className="description-music">
@@ -776,6 +843,13 @@ export default function Music() {
         <div className="mb-5 footer-margin">
           <Footer />
         </div>
+
+        {/* ======== Audio Player ========= */}
+        {isPlaying && (
+          <div className={` position-fixed bottom-0 start-0 end-0  player flex-column flex-md-row`}>
+              <AudioPlayerrrr setIsPlayinggg={setIsPlaying} musicsrc={music.MusicUrl} coverMusic={music.Cover} SongName={music.SongName} Singer={music.Singer}/>
+          </div>
+        )}
       </div>
     </>
   );
