@@ -3,7 +3,11 @@
     background-color: #fff;
     border-left: 1px solid #dadada;
     transition: all 300ms ;
-
+    position: sticky;    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
     
   }
   

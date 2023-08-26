@@ -79,11 +79,7 @@
                 "path": "/"   
             }
         ]
-    },
-    {
-        "title": "علاقه مندی ها",
-        "icon": "bi bi-heart",
-        "path" : "/liked"
     }
+   
    
 ]

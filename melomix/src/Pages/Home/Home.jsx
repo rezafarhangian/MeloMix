@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { MdPodcasts } from "react-icons/md";
 import { CiFaceFrown } from "react-icons/ci";
+import { GoBook } from "react-icons/go";
 import Container from "react-bootstrap/Container";
 import "./Home.scss";
 import musics from "../../data/musics";
@@ -21,7 +22,7 @@ import Sound from "../../components/Sound/Sound";
 
 export default function Home() {
   return (
-    <div className="mb-5 page-container">
+    <div className=" page-container">
       <HeaderHomePage />
 
       <div className="music">
@@ -29,7 +30,7 @@ export default function Home() {
           <div className="d-flex  music_title">
             <BsMusicNoteBeamed />
             <h6>
-              بخش موسیقی <span>( 25 )</span>
+               موسیقی <span>( 25 )</span>
             </h6>
           </div>
 
@@ -64,7 +65,7 @@ export default function Home() {
               >
                 {musics.pop.map((m) => (
                   <SwiperSlide key={m.id} className="">
-                    <Link to={`music/${m.category}/${m.SongName}`}>
+                    <Link  to={`music/${m.category}/${m.SongName}`}>
                       <Sound
                         cover={m.Cover}
                         singer={m.Singer}
@@ -219,7 +220,7 @@ export default function Home() {
       <div className="audio-book">
         <Container>
           <div className="d-flex  audio-book_title mb-3">
-            <MdPodcasts />
+            <GoBook />
             <h6>
               کتاب صوتی <span>( 0 )</span>
             </h6>

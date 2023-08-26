@@ -14,7 +14,7 @@ import DOMPurify from "dompurify";
 import PlaceholderImage from "../../../public/assets/images/CoverMusic/placeholder.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
+import Comments from "../../components/Comments/Comments";
 import Swal from "sweetalert2";
 
 
@@ -23,10 +23,7 @@ import Swal from "sweetalert2";
 export default function Music() {
 
 
-
- 
-
-
+  
   const [music, setMusic] = useState({});
   const [pages, setPages] = useState(1);
   const [openForm, setOpenForm] = useState(false);
@@ -108,7 +105,6 @@ export default function Music() {
               height="280px"
               width="100%"
             />
-            {/* <img className="w-100  single-track-bg" src={music.Cover} alt="" /> */}
 
             <div className="p-3 pe-sm-5 position-absolute top-0">
               <div className="single-track-cover rounded overflow-hidden">
@@ -340,7 +336,7 @@ export default function Music() {
                         id=""
                         placeholder="برای ارسال کامنت ابتدا وارد حساب کاربری خود شوید."
                       ></textarea>
-                      <Link to="/">
+                      <Link to="/login">
                         <button className="">ورود / ثبت نام</button>
                       </Link>
                     </form>
@@ -348,74 +344,8 @@ export default function Music() {
                   {music.Comments.length ? (
                     <div className="mt-5 comments-box p-2 rounded">
                       {music.Comments.map((m) => (
-                        <div key={m.id} className="comment p-2 rounded my-4">
-                          <div className="comment-body">
-                            <div className="d-flex justify-content-between align-items-center px-2">
-                              <div className="comment-profile d-flex align-items-center">
-                                <span>
-                                  <FaUser />
-                                </span>
-                                <span className="fw-bold mt-2">{m.name}</span>
-                              </div>
-                              <div className="comment-date">{m.date}</div>
-                            </div>
-                            <div className="pe-4 ps-2  my-3 conmment-text">
-                              {m.text}
-                            </div>
-                            <div className=" d-flex justify-content-end">
-                              <button
-                                onClick={() => setOpenForm(!openForm)}
-                                className="comment-reply-btn"
-                              >
-                                <span>پاسخ</span>
-                                <BsFillReplyFill />
-                              </button>
-                            </div>
-                          </div>
-
-                          <div
-                            className={`${
-                              !openForm ? "d-none" : "d-block"
-                            } comment-reply-form  p-2`}
-                          >
-                            <div className={` post-comments-form`}>
-                              <h4>فرم ثبت نظرات</h4>
-                              <form className="post-comments">
-                                <textarea
-                                  name=""
-                                  id=""
-                                  placeholder="برای ارسال کامنت ابتدا وارد حساب کاربری خود شوید."
-                                ></textarea>
-                                <Link to="/">
-                                  <button className="">ورود / ثبت نام</button>
-                                </Link>
-                              </form>
-                            </div>
-                          </div>
-
-                          {/* ================ reply comment ============== */}
-                          {m.reply &&
-                            m.reply.map((c) => (
-                              <div key={c.id} className="mt-5">
-                                <div className="comment-body bg-body-secondary p-3 rounded my-3">
-                                  <div className="d-flex justify-content-between align-items-center px-2">
-                                    <div className="comment-profile d-flex align-items-center">
-                                      <span>
-                                        <FaUser />
-                                      </span>
-                                      <span className="fw-bold mt-2">
-                                        {c.name}
-                                      </span>
-                                    </div>
-                                    <div className="comment-date">{c.date}</div>
-                                  </div>
-                                  <div className="pe-4 ps-2 my-3  conmment-text">
-                                    {c.text}
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                        </div>
+                        
+                        <Comments key={m.id} m={m}/>
                       ))}
                     </div>
                   ) : (
@@ -723,7 +653,7 @@ export default function Music() {
                             id=""
                             placeholder="برای ارسال کامنت ابتدا وارد حساب کاربری خود شوید."
                           ></textarea>
-                          <Link to="/">
+                          <Link to="/login">
                             <button className="fw-bold">ورود / ثبت نام</button>
                           </Link>
                         </form>
@@ -732,83 +662,8 @@ export default function Music() {
                       {music.Comments.length ? (
                         <div className="mt-5 comments-box p-2 rounded">
                           {music.Comments.map((m) => (
-                            <div
-                              key={m.id}
-                              className="comment p-2 rounded my-4"
-                            >
-                              <div className="comment-body">
-                                <div className="d-flex justify-content-between align-items-center px-2">
-                                  <div className="comment-profile d-flex align-items-center">
-                                    <span>
-                                      <FaUser />
-                                    </span>
-                                    <span className="fw-bold mt-2">
-                                      {m.name}
-                                    </span>
-                                  </div>
-                                  <div className="comment-date">{m.date}</div>
-                                </div>
-                                <div className="pe-4 ps-2  my-3 conmment-text">
-                                  {m.text}
-                                </div>
-                                <div className=" d-flex justify-content-end">
-                                  <button
-                                    onClick={() => setOpenForm(!openForm)}
-                                    className="comment-reply-btn"
-                                  >
-                                    <span>پاسخ</span>
-                                    <BsFillReplyFill />
-                                  </button>
-                                </div>
-                              </div>
-
-                              <div
-                                className={`${
-                                  !openForm ? "d-none" : "d-block"
-                                } comment-reply-form  p-2`}
-                              >
-                                <div className={` post-comments-form`}>
-                                  <h4>فرم ثبت نظرات</h4>
-                                  <form className="post-comments">
-                                    <textarea
-                                      name=""
-                                      id=""
-                                      placeholder="برای ارسال کامنت ابتدا وارد حساب کاربری خود شوید."
-                                    ></textarea>
-                                    <Link to="/">
-                                      <button className="">
-                                        ورود / ثبت نام
-                                      </button>
-                                    </Link>
-                                  </form>
-                                </div>
-                              </div>
-
-                              {/* ================ reply comment ============== */}
-                              {m.reply &&
-                                m.reply.map((c) => (
-                                  <div key={c.id} className="mt-5">
-                                    <div className="comment-body bg-body-secondary p-3 rounded my-3">
-                                      <div className="d-flex justify-content-between align-items-center px-2">
-                                        <div className="comment-profile d-flex align-items-center">
-                                          <span>
-                                            <FaUser />
-                                          </span>
-                                          <span className="fw-bold mt-2">
-                                            {c.name}
-                                          </span>
-                                        </div>
-                                        <div className="comment-date">
-                                          {c.date}
-                                        </div>
-                                      </div>
-                                      <div className="pe-4 ps-2 my-3  conmment-text">
-                                        {c.text}
-                                      </div>
-                                    </div>
-                                  </div>
-                                ))}
-                            </div>
+                           
+                             <Comments key={m.id} m={m}/>
                           ))}
                         </div>
                       ) : (
@@ -875,7 +730,7 @@ export default function Music() {
             </Container>
           </div>
         </div>
-        <div className="mb-5 footer-margin">
+        <div className=" footer-margin">
           <Footer />
         </div>
 

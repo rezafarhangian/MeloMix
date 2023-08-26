@@ -12,7 +12,7 @@ export default function Sidebar({ openSidebar, setOpenSidebar }) {
     <div
       className={`${
         openSidebar ? "opensidebar px-4" : "closesidebar px-0"
-      } sidebar h-100  d-none d-lg-block overflow-y-auto flex-shrink-0`}
+      } sidebar d-none d-lg-block overflow-y-auto flex-shrink-0`}
     >
       <div
         className={`${

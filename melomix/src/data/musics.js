@@ -1,7 +1,7 @@
 const musics = {
     pop: [
         {
-            id :crypto.randomUUID() , category: "pop", Singer: "راغب", SongName: "پر رواز", time: "03:31", Description: ` <p>تو پر پروازم باش</p>
+            id :crypto.randomUUID() , isLiked : false , category: "pop", Singer: "راغب", SongName: "پر رواز", time: "03:31", Description: ` <p>تو پر پروازم باش</p>
             <p>بیا و مالک قلبم باش</p>
             <p>تمام فکرم در اختیار تو</p>
             <br />
@@ -42,7 +42,7 @@ const musics = {
 
 
         {
-            id :crypto.randomUUID() , category: "pop", Singer: "امو بند", SongName: "دیوار", time: "03:28", Description: ` <p>دیدی چی شد آخرش عشق تو قسمت کی شد</p>
+            id :crypto.randomUUID() , isLiked : false , category: "pop", Singer: "امو بند", SongName: "دیوار", time: "03:28", Description: ` <p>دیدی چی شد آخرش عشق تو قسمت کی شد</p>
         <p>چیزی که میخواستم و هی نمیشد</p>
         <p>مال من نبود اسم تو انگار تو فال من نبود</p>
         <p>اگه بود این وضع حال من نبود</p>
@@ -77,7 +77,7 @@ const musics = {
 
 
         {
-            id :crypto.randomUUID() , category: "pop", Singer: "اشوان", SongName: "ذره ذره", time: "03:01", Description: `<p>بعد یه عمری سرسری تورو چشم من دید</p>
+            id :crypto.randomUUID() , isLiked : false , category: "pop", Singer: "اشوان", SongName: "ذره ذره", time: "03:01", Description: `<p>بعد یه عمری سرسری تورو چشم من دید</p>
         <p>زیر چشمی خندید خب دل مام لرزید</p>
         <p>نمیدونم واسه این دل پر توقعمه یا توهمه</p>
         <p>ولی حسم عجیبه و پام رو پام بند نیست</p>
@@ -106,7 +106,7 @@ const musics = {
         <p>ببخش اگه فقط همینو بلدم …</p>`, Cover: "/assets/images/CoverMusic/Ashvan-Zare-Zare.jpg", MusicUrl: "/assets/Music/Ashvan - Zare Zare - 128.mp3", Composer: "اشوان", Musician: "اشوان", SongWriter: "اشوان", License: "شرکت رویال هنر", MixingAndMastering: "محمد فلاحی", Regulators: "فرهاد ماهان", YearOfPublication: "8 ماه پیش", NumberOfBroadcasts: "3050", Comments: []
         },
         {
-            id :crypto.randomUUID() , category: "pop", Singer: "آصف آریا", SongName: "هیس", time: "03:12", Description: `<p>شب موهات واسه من بوی عطرم بوی تو</p>
+            id :crypto.randomUUID() , isLiked : false , category: "pop", Singer: "آصف آریا", SongName: "هیس", time: "03:12", Description: `<p>شب موهات واسه من بوی عطرم بوی تو</p>
         <p>رخت عشقت تن من همه جونم واسه تو</p>
         <p>دیدی میلرزه دلم وقتی به من زل میزنی</p>
         <p>چه قشنگ از ته چشمات به دلم پل میزنی</p>
@@ -130,7 +130,7 @@ const musics = {
         ]
         },
         {
-            id :crypto.randomUUID() , category: "pop", Singer: "امین رستمی", SongName: "دلبر", time: "02:56", Description: `<p>میبینمت دل میشه پر پر این چه حسیه آی دلبر</p>
+            id :crypto.randomUUID() , isLiked : false , category: "pop", Singer: "امین رستمی", SongName: "دلبر", time: "02:56", Description: `<p>میبینمت دل میشه پر پر این چه حسیه آی دلبر</p>
         <p>این عشق میکشه منو آخر این چه حسیه آی دلبر</p>
         <p>با تو آرومه دلم آرومه دلم توی قانون دلم به تو محکومه دلم</p>
         <p>دلبر میبری هوش و حواس از سر دلبر بیا بزنیم به سیم آخر</p>
@@ -157,7 +157,7 @@ const musics = {
         ]
         },
         {
-            id :crypto.randomUUID() , category: "pop", Singer: "احمد سلو", SongName: "شازده خانوم", time: "03:18", Description: `<p>بیا جمع و جورم کن از آدما دورم کن</p>
+            id :crypto.randomUUID() , isLiked : false , category: "pop", Singer: "احمد سلو", SongName: "شازده خانوم", time: "03:18", Description: `<p>بیا جمع و جورم کن از آدما دورم کن</p>
         <p>دلگیرم از این دنیا یه نقطه ی کورم کن</p>
         <p>بیا جمع و جورم کن حالم بده خوبم کن</p>
         <p>چشمات همه دنیامه چشاتو مهمونم کن</p>
@@ -185,7 +185,7 @@ const musics = {
     ],
     traditional: [
         {
-            id :crypto.randomUUID() , category: "traditional", Singer: "سالار عقیلی", SongName: "کجایی", time: "04:37", Description: `<p>من از بی تو بودن شکستم کجایی،کجایی</p>
+            id :crypto.randomUUID() , isLiked : false , category: "traditional", Singer: "سالار عقیلی", SongName: "کجایی", time: "04:37", Description: `<p>من از بی تو بودن شکستم کجایی،کجایی</p>
         <p>نگو حقمه این همه بی وفایی،کجایی</p>
         <p>هجوم غمت را تحمل ندارم</p>
         <p>نگو که خطا بود این آشنایی،کجایی</p>
@@ -219,7 +219,7 @@ const musics = {
         ]
         },
         {
-            id :crypto.randomUUID() , category: "traditional", Singer: "محمدرضا شجریان", SongName: "بارون", time: "04:30", Description: ` <p>ببار ای بارون ببار با دلم گریه کن خون ببار</p>
+            id :crypto.randomUUID() , isLiked : false , category: "traditional", Singer: "محمدرضا شجریان", SongName: "بارون", time: "04:30", Description: ` <p>ببار ای بارون ببار با دلم گریه کن خون ببار</p>
         <p>در شبای تیره چون زلف یار بهر لیلی چو مجنون ببار ای بارون</p>
        <p>دلا خون شو خون ببار بر کوه و دشت و هامون ببار</p>
         <p>دلا خون شو خون ببار بر کوه و دشت و هامون ببار</p>
@@ -247,7 +247,7 @@ const musics = {
         ]
         },
         {
-            id :crypto.randomUUID() , category: "traditional", Singer: "همایون شجریان", SongName: "کولی", time: "05:15", Description: `<p>رفت آن سوار کولی با خود تو را نبرده</p>
+            id :crypto.randomUUID() ,isLiked : false , category: "traditional", Singer: "همایون شجریان", SongName: "کولی", time: "05:15", Description: `<p>رفت آن سوار کولی با خود تو را نبرده</p>
 
         <p>شب مانده است وبا شب تاریکی فشرده</p>
         
@@ -279,7 +279,7 @@ const musics = {
         ]
         },
         {
-            id :crypto.randomUUID() , category: "traditional", Singer: "علیرضا قربانی", SongName: "پریشانی", time: "04:33", Description: `<p>روزگار من و مویش به پریشانی رفت</p>
+            id :crypto.randomUUID() , isLiked : false , category: "traditional", Singer: "علیرضا قربانی", SongName: "پریشانی", time: "04:33", Description: `<p>روزگار من و مویش به پریشانی رفت</p>
         <p>یک شب آرام رسید یک شب بارانی رفت</p>
         <p>یک شب آمد من مجنون به جنون افتادم</p>
         <p>دل دیوانه ی خود را به نگاهش دادم</p>
@@ -304,7 +304,7 @@ const musics = {
         ]
         },
         {
-            id: 5, category: "traditional", Singer: "علیرضا افتخاری", SongName: "عاشق شدن", time: "05:13", Description: `<p>دیگه عاشق شدن ناز کشیدن فایده نداره نداره</p>
+            id :crypto.randomUUID(), isLiked : false , category: "traditional", Singer: "علیرضا افتخاری", SongName: "عاشق شدن", time: "05:13", Description: `<p>دیگه عاشق شدن ناز کشیدن فایده نداره نداره</p>
         <p>دیگه دنبال آهو دویدن فایده نداره نداره</p>
         <p>چرا این در و اون در میزنی ای دل غافل</p>
         <p>دیگه دل بستن و دل بریدن فایده نداره</p>
@@ -334,7 +334,7 @@ const musics = {
         ]
         },
         {
-            id: 6, category: "traditional", Singer: "علی زند وکیلی", SongName: "شهر حسود", time: "04:15", Description: `<p>ما از این شهر غریبه بی تفاوت کوچ کردیم</p>
+            id :crypto.randomUUID() , isLiked : false , category: "traditional", Singer: "علی زند وکیلی", SongName: "شهر حسود", time: "04:15", Description: `<p>ما از این شهر غریبه بی تفاوت کوچ کردیم</p>
         <p>از رفیقا زخم خوردیم تا یه روزی بر نگردیم</p>
         <p>خونمون رو دوشمونه ما یه آه دوره گردیم ما واقعا با هم چه کردیم</p>
         <p>ما غنیمت های بی رویای این جنگای سردیم</p>
@@ -359,7 +359,7 @@ const musics = {
         ]
         },
         {
-            id: 7, category: "traditional", Singer: "شهرام ناظری", SongName: "شیرین", time: "04:43", Description: ` <p>کوانی مه یله که ی گیانا! جاری جارانت</p>
+            id :crypto.randomUUID() , isLiked : false , category: "traditional", Singer: "شهرام ناظری", SongName: "شیرین", time: "04:43", Description: ` <p>کوانی مه یله که ی گیانا! جاری جارانت</p>
         <p>کوانی هاتوچووی سه ر هاوارانت ئای بووم هه لاک</p>
         <p>شیرین شیرین ده م بووچک شیرین عمرم ته مامه ئه</p>
         <p>ری ئاخرین قسه م گیانا! هه ر ئاوی تویه ئه ری هه ر</p>
@@ -368,20 +368,20 @@ const musics = {
 
     ],
     moviemusic: [
-        { id: crypto.randomUUID(), category: "moviemusic", Singer: "", SongName: "پدرخوانده", time: "04:37", Description: "", Cover: "/assets/images/CoverMusic/Godfather.jpg", MusicUrl: "/assets/Music/Godfather.mp3", Composer: "نینو روتا", Musician: "نینو روتا", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "نینو روتا", YearOfPublication: "50 سال پیش", NumberOfBroadcasts: "6000", Comments: [{id :crypto.randomUUID() , date : "3 سال پیش" , name : "فری", text : "سلام خسته نباشید اون آهنگی که شبکه نمایش قبل فیلما میذاشت یه آدم کنار خیابون زیر بارون ایستاده بود کدوم ورژن آهنگ پدرخوانده هستش؟", reply :[{id :crypto.randomUUID() ,date : "2 سال پیش", name : "ستوده", text :"😂😂😂"}]}] },
-        { id: crypto.randomUUID(), category: "moviemusic", Singer: "", SongName: "هرکول پوآرو", time: "04:30", Description: "", Cover: "/assets/images/CoverMusic/Hercule_Poirot.jpg", MusicUrl: "/assets/Music/Hercule_Poirot.mp3", Composer: "کریستوفر گانینگ", Musician: "کریستوفر گانینگ", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "30 سال پیش", NumberOfBroadcasts: "471", Comments: [{id :crypto.randomUUID() , date : "2 سال پیش", name : "میترا", text : "خیلی ممنون. درخواست دارم اگر ممکنه بقیه آهنگ های این سریال که کریستوفر گانینگ ساختن رو هم قرار بدین.سپاس", reply :[]}] },
-        { id: crypto.randomUUID(), category: "moviemusic", Singer: "", SongName: "نخستین انسان", time: "05:15", Description: "", Cover: "/assets/images/CoverMusic/man.jpg", MusicUrl: "/assets/Music/man.mp3", Composer: "ولادیمیر هوروویتس", Musician: "ولادیمیر هوروویتس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "5 سال پیش", NumberOfBroadcasts: "269", Comments: [] },
-        { id: crypto.randomUUID(), category: "moviemusic", Singer: "", SongName: "گلادیاتور", time: "04:33", Description: "", Cover: "/assets/images/CoverMusic/gladiator.jpg", MusicUrl: "/assets/Music/gladiator.mp3", Composer: "هانس زیمر", Musician: "هانس زیمر", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "20 سال پیش", NumberOfBroadcasts: "921", Comments: [{id :crypto.randomUUID() , date : "11 ماه پیش", name : "ریما", text : "بهتون افتخار میکنم ،بسیار بسیار زیبا و عمیق،روح انسان را نوازش میدهد", reply :[]}] },
-        { id: crypto.randomUUID(), category: "moviemusic", Singer: "", SongName: "فتح بهشت", time: "05:13", Description: "", Cover: "/assets/images/CoverMusic/1492-Conquest-of-Paradise.jpg", MusicUrl: "/assets/Music/Conquest_of_Paradise.mp3", Composer: "ونجلیس", Musician: "ونجلیس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "30 سال پیش", NumberOfBroadcasts: "3500", Comments: [{id :crypto.randomUUID() , date : "9 ماه پیش", name : "پویا", text : "آنقدر که این موسیقی معروف شد فیلمش نشد،، ", reply :[{ id :crypto.randomUUID() , date : "5 ماه پیش", name : "رضا", text :"😂😂😂😂"}]}] },
+        { id: crypto.randomUUID(), isLiked : false , category: "moviemusic", Singer: "", SongName: "پدرخوانده", time: "04:37", Description: "", Cover: "/assets/images/CoverMusic/Godfather.jpg", MusicUrl: "/assets/Music/Godfather.mp3", Composer: "نینو روتا", Musician: "نینو روتا", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "نینو روتا", YearOfPublication: "50 سال پیش", NumberOfBroadcasts: "6000", Comments: [{id :crypto.randomUUID() , date : "3 سال پیش" , name : "فری", text : "سلام خسته نباشید اون آهنگی که شبکه نمایش قبل فیلما میذاشت یه آدم کنار خیابون زیر بارون ایستاده بود کدوم ورژن آهنگ پدرخوانده هستش؟", reply :[{id :crypto.randomUUID() ,date : "2 سال پیش", name : "ستوده", text :"😂😂😂"}]}] },
+        { id: crypto.randomUUID(), isLiked : false , category: "moviemusic", Singer: "", SongName: "هرکول پوآرو", time: "04:30", Description: "", Cover: "/assets/images/CoverMusic/Hercule_Poirot.jpg", MusicUrl: "/assets/Music/Hercule_Poirot.mp3", Composer: "کریستوفر گانینگ", Musician: "کریستوفر گانینگ", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "30 سال پیش", NumberOfBroadcasts: "471", Comments: [{id :crypto.randomUUID() , date : "2 سال پیش", name : "میترا", text : "خیلی ممنون. درخواست دارم اگر ممکنه بقیه آهنگ های این سریال که کریستوفر گانینگ ساختن رو هم قرار بدین.سپاس", reply :[]}] },
+        { id: crypto.randomUUID(), isLiked : false , category: "moviemusic", Singer: "", SongName: "نخستین انسان", time: "05:15", Description: "", Cover: "/assets/images/CoverMusic/man.jpg", MusicUrl: "/assets/Music/man.mp3", Composer: "ولادیمیر هوروویتس", Musician: "ولادیمیر هوروویتس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "5 سال پیش", NumberOfBroadcasts: "269", Comments: [] },
+        { id: crypto.randomUUID(), isLiked : false , category: "moviemusic", Singer: "", SongName: "گلادیاتور", time: "04:33", Description: "", Cover: "/assets/images/CoverMusic/gladiator.jpg", MusicUrl: "/assets/Music/gladiator.mp3", Composer: "هانس زیمر", Musician: "هانس زیمر", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "20 سال پیش", NumberOfBroadcasts: "921", Comments: [{id :crypto.randomUUID() , date : "11 ماه پیش", name : "ریما", text : "بهتون افتخار میکنم ،بسیار بسیار زیبا و عمیق،روح انسان را نوازش میدهد", reply :[]}] },
+        { id: crypto.randomUUID(), isLiked : false , category: "moviemusic", Singer: "", SongName: "فتح بهشت", time: "05:13", Description: "", Cover: "/assets/images/CoverMusic/1492-Conquest-of-Paradise.jpg", MusicUrl: "/assets/Music/Conquest_of_Paradise.mp3", Composer: "ونجلیس", Musician: "ونجلیس", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "30 سال پیش", NumberOfBroadcasts: "3500", Comments: [{id :crypto.randomUUID() , date : "9 ماه پیش", name : "پویا", text : "آنقدر که این موسیقی معروف شد فیلمش نشد،، ", reply :[{ id :crypto.randomUUID() , date : "5 ماه پیش", name : "رضا", text :"😂😂😂😂"}]}] },
 
     ],
     relaxingmusic: [
-        { id :crypto.randomUUID() , category: "relaxingmusic", Singer: "", SongName: "صدای باران", time: "09:59", Description: "", Cover: "/assets/images/CoverMusic/rain.jpg", MusicUrl: "/assets/Music/baran.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "3 ماه پیش", NumberOfBroadcasts: "66", Comments: [] },
-        { id :crypto.randomUUID() , category: "relaxingmusic", Singer: "", SongName: "صدای دریا و پرنده", time: "05:09", Description: "", Cover: "/assets/images/CoverMusic/sea.jpg", MusicUrl: "/assets/Music/darya-morghabi.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "2 روز پیش", NumberOfBroadcasts: "103", Comments: [] },
-        { id :crypto.randomUUID() , category: "relaxingmusic", Singer: "", SongName: "صدای جنگل", time: "05:19", Description: "", Cover: "/assets/images/CoverMusic/jangel.jpg", MusicUrl: "/assets/Music/jangal-parande.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "هفته پیش", NumberOfBroadcasts: "500", Comments: [] },
-        { id :crypto.randomUUID() , category: "relaxingmusic", Singer: "", SongName: "صدای پیانو", time: "02:53", Description: "", Cover: "/assets/images/CoverMusic/piano.jpg", MusicUrl: "/assets/Music/Autumn-Relaxing.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "9 ماه پیش", NumberOfBroadcasts: "95", Comments: [] },
-        { id :crypto.randomUUID() , category: "relaxingmusic", Singer: "", SongName: "صدای رودخانه", time: "03:37", Description: "", Cover: "/assets/images/CoverMusic/river.jpg", MusicUrl: "/assets/Music/roodkhane.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "6 ماه پیش", NumberOfBroadcasts: "444", Comments: [] },
-        { id :crypto.randomUUID() , category: "relaxingmusic", Singer: "", SongName: "صدای موج دریا", time: "04:16", Description: "", Cover: "/assets/images/CoverMusic/wave.jpg", MusicUrl: "/assets/Music/mooj.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "12 روز پیش", NumberOfBroadcasts: "61", Comments: [] },
+        { id :crypto.randomUUID() , isLiked : false , category: "relaxingmusic", Singer: "", SongName: "صدای باران", time: "09:59", Description: "", Cover: "/assets/images/CoverMusic/rain.jpg", MusicUrl: "/assets/Music/baran.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "3 ماه پیش", NumberOfBroadcasts: "66", Comments: [] },
+        { id :crypto.randomUUID() , isLiked : false , category: "relaxingmusic", Singer: "", SongName: "صدای دریا و پرنده", time: "05:09", Description: "", Cover: "/assets/images/CoverMusic/sea.jpg", MusicUrl: "/assets/Music/darya-morghabi.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "2 روز پیش", NumberOfBroadcasts: "103", Comments: [] },
+        { id :crypto.randomUUID() , isLiked : false , category: "relaxingmusic", Singer: "", SongName: "صدای جنگل", time: "05:19", Description: "", Cover: "/assets/images/CoverMusic/jangel.jpg", MusicUrl: "/assets/Music/jangal-parande.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "هفته پیش", NumberOfBroadcasts: "500", Comments: [] },
+        { id :crypto.randomUUID() , isLiked : false , category: "relaxingmusic", Singer: "", SongName: "صدای پیانو", time: "02:53", Description: "", Cover: "/assets/images/CoverMusic/piano.jpg", MusicUrl: "/assets/Music/Autumn-Relaxing.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "9 ماه پیش", NumberOfBroadcasts: "95", Comments: [] },
+        { id :crypto.randomUUID() , isLiked : false , category: "relaxingmusic", Singer: "", SongName: "صدای رودخانه", time: "03:37", Description: "", Cover: "/assets/images/CoverMusic/river.jpg", MusicUrl: "/assets/Music/roodkhane.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "6 ماه پیش", NumberOfBroadcasts: "444", Comments: [] },
+        { id :crypto.randomUUID() , isLiked : false , category: "relaxingmusic", Singer: "", SongName: "صدای موج دریا", time: "04:16", Description: "", Cover: "/assets/images/CoverMusic/wave.jpg", MusicUrl: "/assets/Music/mooj.mp3", Composer: "", Musician: "", SongWriter: "", License: "", MixingAndMastering: "", Regulators: "", YearOfPublication: "12 روز پیش", NumberOfBroadcasts: "61", Comments: [] },
 
     ],
 
